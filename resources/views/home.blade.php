@@ -14,7 +14,9 @@
             <path
                 d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
                 class="shape-fill"></path>
+
         </svg>
+
         <div class="container">
             <section id="main-home">
                 <h1>Benvenuto in</h1>
@@ -24,37 +26,18 @@
     </div>
     <div class="container last-relase">
         <h2 class="text-center">ULTIME USCITE</h2>
-        <div class="card-group my-5">
-            <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                        content. This content is a little bit longer.</p>
-                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                        content. This card has even longer content than the first to show that equal height action.</p>
-                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                </div>
-            </div>
-        </div>
 
-        <div class="button">
-            <a href="#">VAI AL CATALOGO COMPLETO</a>
+        <div class="card-group my-5">
+            @foreach ($movies as $movie)
+                <div class="card border-dark mb-3" style="max-width: 18rem;">
+                    <div class="card-header">
+                        {{ $movie->original_title }}</div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $movie->title }}</h5>
+                        <p class="card-text">{{ $movie->date }}</p>
+                    </div>
+                </div>
+            @endforeach
         </div>
     </div>
 @endsection

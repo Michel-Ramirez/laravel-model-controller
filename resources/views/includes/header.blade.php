@@ -8,11 +8,8 @@
 
             </div>
             <div class="col-7">
-                <a href="@">
+                <a href="{{ route('home') }}">
                     <h6>HOME</h6>
-                </a>
-                <a href="@">
-                    <h6>CATALOGO</h6>
                 </a>
             </div>
         </div>
