@@ -1,25 +1,4 @@
 #main-home {
-    .custom-shape-divider-bottom-1692713010 {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        overflow: hidden;
-        line-height: 0;
-        transform: rotate(180deg);
-    }
-
-    .custom-shape-divider-bottom-1692713010 svg {
-        position: relative;
-        display: block;
-        width: calc(128% + 1.3px);
-        height: 203px;
-    }
-
-    .custom-shape-divider-bottom-1692713010 .shape-fill {
-        fill: #ffffff;
-    }
-
     h3 {
         font-weight: 800;
         color: red;
@@ -29,21 +8,14 @@
 .last-relase {
     margin: 150px 0;
 
-    .button {
-        margin-top: 70px;
-        text-align: center;
-        a {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            padding: 20px;
-            background-color: lightseagreen;
-            border-radius: 10px;
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 50px;
+
+        .card {
+            width: 18rem;
         }
     }
-}
-
-.card-group {
-    display: flex;
-    justify-content: center;
 }

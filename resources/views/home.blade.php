@@ -16,28 +16,32 @@
                 class="shape-fill"></path>
 
         </svg>
+        <div id="main-home">
+            <div class="container">
+                <section>
+                    <h1>Benvenuto in</h1>
+                    <h3> MOVIE DB</h3>
+                </section>
+            </div>
+        </div>
+        <div class="container last-relase">
+            <h2 class="text-center mt-5">FILM DA OSCAR</h2>
 
-        <div class="container">
-            <section id="main-home">
-                <h1>Benvenuto in</h1>
-                <h3> MOVIE DB</h3>
-            </section>
+            <div class="cards">
+                @foreach ($movies as $movie)
+                    <div class="card">
+                        <img src="{{ $movie->poster }}" class="card-img-top" alt="{{ $movie->title }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ $movie->title }}</h5>
+                            <p class="card-text">{{ $movie->original_title }}</p>
+                            <a href="{{ $movie->trailer }}" class="btn btn-primary">GUARDA TRAILER</a>
+                        </div>
+                    </div>
+                @endforeach
+
+            </div>
         </div>
     </div>
-    <div class="container last-relase">
-        <h2 class="text-center">ULTIME USCITE</h2>
 
-        <div class="card-group my-5">
-            @foreach ($movies as $movie)
-                <div class="card border-dark mb-3" style="max-width: 18rem;">
-                    <div class="card-header">
-                        {{ $movie->original_title }}</div>
-                    <div class="card-body">
-                        <h5 class="card-title">{{ $movie->title }}</h5>
-                        <p class="card-text">{{ $movie->date }}</p>
-                    </div>
-                </div>
-            @endforeach
-        </div>
     </div>
 @endsection
